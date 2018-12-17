@@ -2,6 +2,7 @@ version: '3'
 services: 
   web:
     build: .
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
     ports: 
       - "5000:5000"
-

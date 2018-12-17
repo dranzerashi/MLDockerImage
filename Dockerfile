@@ -49,4 +49,4 @@ RUN pip3.6 install -U \
 # Workspace creation
 ADD . /code
 WORKDIR /code
-#CMD ["python3.6", "app.py"]
+CMD ["python3.6", "app.py"]
