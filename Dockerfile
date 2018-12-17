@@ -1,5 +1,5 @@
 FROM nvidia/cuda:9.0-cudnn7-runtime
-MAINTAINER Infosys STGAT Team "akshatha_holla@infosys.com"
+MAINTAINER Infosys STGAT Team
 
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
