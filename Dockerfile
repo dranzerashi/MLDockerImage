@@ -44,9 +44,13 @@ RUN pip3.6 install -U \
 RUN pip3.6 install -U \
       tensorflow-gpu \
       tensorboard \
-      keras
+      keras \
+      opencv-python
+
+RUN apt install libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev -y
+#RUN  apt install -y libsm6 libxext6
 
 # Workspace creation
 ADD . /code
 WORKDIR /code
-CMD ["python3.6", "app.py"]
+CMD ["python3.6", "lenet.py"]
