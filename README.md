@@ -1,7 +1,14 @@
 # MLDockerImage
-An Image for running Tensorflow-gpu on Docker
+A Docker Image for running Tensorflow-gpu on Docker.
 
-```
+This Requires installing nvidia-docker2 on the system and using the nvidia runtime so as to enable the visibility of the GPU to the container instance.
+
+To use docker-compose to directly use the nvidia runtime by default set the ```"default-runtime"```  as ```"nvidia"``` in /etc/docker/daemon.json.
+
+The base image is derived from nvidia/cuda:9.0-cudnn7-runtime. Replace with appropriate version for the specific usecase from [here](https://gitlab.com/nvidia/cuda). 
+
+
+```bash
 sudo apt autoremove
 sudo apt-get installsudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
 sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
